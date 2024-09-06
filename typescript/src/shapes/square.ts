@@ -1,10 +1,11 @@
-function square(sideLen: number): Shape {
-    return {
-        sideLen,
-        computeArea: function (): number {
-            return sideLen * sideLen
-        }
+export class Square implements Shape {
+    private sideLen: number;
+
+    constructor(sideLen: number) {
+        this.sideLen = sideLen;
+    }
+
+    getArea(): number {
+        return this.sideLen * this.sideLen;
     }
 }
-
-export { square }
